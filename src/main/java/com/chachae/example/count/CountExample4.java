@@ -14,9 +14,12 @@ import java.util.concurrent.Semaphore;
  */
 @NotThreadSafe
 @Slf4j
-public class CountExample1 {
+public class CountExample4 {
 
-  private static int count = 0;
+  /*
+  使用volatile修饰计数值
+   */
+  private static volatile int count = 0;
 
   public static void main(String[] args) throws InterruptedException {
     // 定义线程池
@@ -49,5 +52,10 @@ public class CountExample1 {
 
   private static void add() {
     count++;
+    /*
+    1. 取出最新值
+    2. +1
+    3. 写会主存
+     */
   }
 }
