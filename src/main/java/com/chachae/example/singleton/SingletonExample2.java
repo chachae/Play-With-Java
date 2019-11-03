@@ -12,6 +12,10 @@ import com.chachae.annoations.ThreadSafe;
 @ThreadSafe
 public class SingletonExample2 {
 
+  /**
+   * 1. 私有构造在实现的时候没有过多的处理【过多可能会出现性能问题】<br>
+   * 2. 在实现的时候肯定会被使用，不会造成资源浪费
+   */
   private SingletonExample2() {}
 
   private static SingletonExample2 instance = new SingletonExample2();

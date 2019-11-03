@@ -33,8 +33,11 @@ public class CountExample1 {
       executorService.execute(
           () -> {
             try {
+              // 获取
               semaphore.acquire();
+              // ++操作
               add();
+              // 释放
               semaphore.release();
             } catch (Exception e) {
               log.error("exception", e);

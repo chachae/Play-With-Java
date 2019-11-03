@@ -21,6 +21,7 @@ public class SingletonExample3 {
   /**
    * 使用 synchronized 修饰，实现线程安全<br>
    * 性能问题
+   * 1. synchronized -> 引起性能问题
    */
   public static synchronized SingletonExample3 getInstance() {
     if (instance == null) {

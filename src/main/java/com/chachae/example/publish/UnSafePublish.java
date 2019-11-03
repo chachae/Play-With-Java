@@ -14,7 +14,7 @@ public class UnSafePublish {
 
   private String[] str = {"a", "b", "c"};
 
-  private String[] getStr() {
+  public String[] getStr() {
     return str;
   }
 

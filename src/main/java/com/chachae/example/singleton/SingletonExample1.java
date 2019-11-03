@@ -12,14 +12,16 @@ import com.chachae.annoations.NotThreadSafe;
 @NotThreadSafe
 public class SingletonExample1 {
 
+  /** 私有构造 */
   private SingletonExample1() {}
 
+  /** 私有对象 */
   private static SingletonExample1 instance = null;
 
   /**
-   * 多线程下线程不安全
+   * 多线程下不安全
    *
-   * @return instance
+   * @return 对象
    */
   public static SingletonExample1 getInstance() {
     if (instance == null) {
