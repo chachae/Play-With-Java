@@ -39,6 +39,13 @@
             <artifactId>guava</artifactId>
             <version>28.1-jre</version>
         </dependency>
+        <!-- jodaTime -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.5</version>
+        </dependency>
+
         <!-- hutool -->
         <dependency>
             <groupId>cn.hutool</groupId>

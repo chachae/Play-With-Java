@@ -14,7 +14,7 @@ import java.io.IOException;
 @Slf4j
 public class HttpFilter implements Filter {
   @Override
-  public void init(FilterConfig filterConfig) throws ServletException {}
+  public void init(FilterConfig filterConfig) {}
 
   @Override
   public void doFilter(

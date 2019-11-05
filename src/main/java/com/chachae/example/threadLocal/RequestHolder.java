@@ -6,17 +6,17 @@ package com.chachae.example.threadLocal;
  */
 public class RequestHolder {
 
-  private static final ThreadLocal<Long> requestHolder = new ThreadLocal<>();
+  private static final ThreadLocal<Long> REQUEST_HOLDER = new ThreadLocal<>();
 
   public static void add(Long id) {
-    requestHolder.set(id);
+    REQUEST_HOLDER.set(id);
   }
 
   public static Long getId() {
-    return requestHolder.get();
+    return REQUEST_HOLDER.get();
   }
 
   public static void remove() {
-    requestHolder.remove();
+    REQUEST_HOLDER.remove();
   }
 }
