@@ -1,30 +1,30 @@
 package com.chachae.example.concurrent;
 
-import cn.hutool.core.thread.ThreadUtil;
 import com.chachae.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.List;
+import java.util.Map;
 import java.util.concurrent.*;
 
 /**
  * @author chachae
- * @date 2019/11/5 11:00
+ * @date 2019/11/5 22:36
  */
 @Slf4j
 @ThreadSafe
-public class CopyOnWriteArrayListExample {
+public class ConcurrentSkipListMapExample {
+
+  // 请求总数
+  public static int clientTotal = 5000;
 
   // 同时并发执行的线程数
   public static int threadTotal = 200;
 
-  private static List<Integer> list = new CopyOnWriteArrayList<>();
+  private static Map<Integer, Integer> map = new ConcurrentSkipListMap<>();
 
   public static void main(String[] args) throws Exception {
-    ExecutorService executorService = ThreadUtil.newExecutor();
+    ExecutorService executorService = Executors.newCachedThreadPool();
     final Semaphore semaphore = new Semaphore(threadTotal);
-    // 请求总数
-    int clientTotal = 5000;
     final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
     for (int i = 0; i < clientTotal; i++) {
       final int count = i;
@@ -42,10 +42,10 @@ public class CopyOnWriteArrayListExample {
     }
     countDownLatch.await();
     executorService.shutdown();
-    log.info("size:{}", list.size());
+    log.info("size:{}", map.size());
   }
 
   private static void update(int i) {
-    list.add(i);
+    map.put(i, i);
   }
 }

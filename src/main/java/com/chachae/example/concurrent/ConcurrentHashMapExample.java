@@ -4,21 +4,24 @@ import cn.hutool.core.thread.ThreadUtil;
 import com.chachae.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.List;
-import java.util.concurrent.*;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Semaphore;
 
 /**
  * @author chachae
- * @date 2019/11/5 11:00
+ * @date 2019/11/5 22:34
  */
 @Slf4j
 @ThreadSafe
-public class CopyOnWriteArrayListExample {
+public class ConcurrentHashMapExample {
 
   // 同时并发执行的线程数
   public static int threadTotal = 200;
 
-  private static List<Integer> list = new CopyOnWriteArrayList<>();
+  private static Map<Integer, Integer> map = new ConcurrentHashMap<>();
 
   public static void main(String[] args) throws Exception {
     ExecutorService executorService = ThreadUtil.newExecutor();
@@ -42,10 +45,10 @@ public class CopyOnWriteArrayListExample {
     }
     countDownLatch.await();
     executorService.shutdown();
-    log.info("size:{}", list.size());
+    log.info("size:{}", map.size());
   }
 
   private static void update(int i) {
-    list.add(i);
+    map.put(i, i);
   }
 }
