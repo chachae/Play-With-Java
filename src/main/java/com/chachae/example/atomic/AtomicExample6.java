@@ -1,12 +1,11 @@
 package com.chachae.example.atomic;
 
 import cn.hutool.core.thread.ThreadUtil;
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -14,21 +13,19 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * @author chachae
  * @date 2019/9/6 13:05
  */
-@NotThreadSafe
+@ThreadSafe
 @Slf4j
 public class AtomicExample6 {
 
   private static AtomicBoolean isHappened = new AtomicBoolean(false);
 
-  // 请求总数
-  private static int clientTotal = 5000;
-
-  // 同时并发执行的线程数
-  private static int threadTotal = 200;
-
   public static void main(String[] args) throws Exception {
     ExecutorService executorService = ThreadUtil.newExecutor();
+    // 同时并发执行的线程数
+    int threadTotal = 200;
     final Semaphore semaphore = new Semaphore(threadTotal);
+    // 请求总数
+    int clientTotal = 5000;
     final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
     for (int i = 0; i < clientTotal; i++) {
       executorService.execute(

@@ -1,20 +1,19 @@
 package com.chachae.example.atomic;
 
 import cn.hutool.core.thread.ThreadUtil;
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * @author chachae
  * @date 2019/9/6 13:05
  */
-@NotThreadSafe
+@ThreadSafe
 @Slf4j
 public class AtomicExample3 {
 

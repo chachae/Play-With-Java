@@ -1,6 +1,6 @@
 package com.chachae.example.atomic;
 
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * @author chachae
  * @date 2019/9/6 13:05
  */
-@NotThreadSafe
+@ThreadSafe
 @Slf4j
 public class AtomicExample4 {
 
@@ -21,6 +21,6 @@ public class AtomicExample4 {
     count.compareAndSet(1, 10);
     count.compareAndSet(10, 20);
     count.compareAndSet(10, 30);
-    log.info("count:{}",count.get());
+    log.info("count:{}", count.get());
   }
 }

@@ -1,6 +1,6 @@
 package com.chachae.example.atomic;
 
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annoations.ThreadSafe;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  * @author chachae
  * @date 2019/9/6 13:05
  */
-@NotThreadSafe
+@ThreadSafe
 @Slf4j
 public class AtomicExample5 {
 
