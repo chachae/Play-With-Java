@@ -21,7 +21,10 @@ public class HttpFilter implements Filter {
       ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
       throws IOException, ServletException {
     HttpServletRequest request = (HttpServletRequest) servletRequest;
-    log.info("do filter {},{}", request.getServletPath(), Thread.currentThread().getId());
+    log.info(
+        "【Do filter】 URI: {},CurrentThread: {}",
+        request.getServletPath(),
+        Thread.currentThread().getId());
     RequestHolder.add(Thread.currentThread().getId());
     filterChain.doFilter(servletRequest, servletResponse);
   }

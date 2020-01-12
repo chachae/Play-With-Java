@@ -20,13 +20,14 @@ public class RedisController {
   @Resource RedisUtil redisUtil;
 
   @GetMapping("set")
-  public ResponseEntity set(@RequestParam("key") String k, @RequestParam("value") String v) {
+  public ResponseEntity<String> set(
+      @RequestParam("key") String k, @RequestParam("value") String v) {
     redisUtil.set(k, v);
     return ResponseEntity.status(HttpStatus.OK).body("success");
   }
 
   @GetMapping("get")
-  public ResponseEntity get(@RequestParam("key") String k) {
+  public ResponseEntity<String> get(@RequestParam("key") String k) {
     String v = redisUtil.get(k);
     return ResponseEntity.status(HttpStatus.OK).body(v);
   }

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.1.RELEASE</version>
+        <version>2.2.2.RELEASE</version>
         <relativePath/>
     </parent>
     <groupId>com.chachae</groupId>
@@ -15,7 +15,7 @@
     <name>concurrency</name>
     <properties>
         <java.version>1.8</java.version>
-        <hutool.version>5.0.6</hutool.version>
+        <hutool.version>5.1.0</hutool.version>
         <guava.version>28.1-jre</guava.version>
         <joda.time.version>2.10.5</joda.time.version>
         <junit.version>4.13-beta-3</junit.version>
@@ -59,7 +59,7 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+        <!-- jedis -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>

@@ -17,6 +17,13 @@ import java.util.concurrent.atomic.LongAdder;
 @Slf4j
 public class AtomicExample2 {
 
+  /**
+   * LongAdder 和 AtomicLong 的对比
+   *
+   * <p>{@link LongAdder}：使用数据分离，Hash 映射，提高并行性，适用于全局ID 有序生成，高精度场景
+   *
+   * <p>{@link java.util.concurrent.atomic.AtomicLong}：适用于线程竞争度小的场景
+   */
   private static LongAdder count = new LongAdder();
 
   public static void main(String[] args) throws InterruptedException {

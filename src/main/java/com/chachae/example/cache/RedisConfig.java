@@ -12,16 +12,19 @@ import redis.clients.jedis.JedisPool;
 @Configuration
 public class RedisConfig {
 
+  @Value("${jedis.port}")
+  private Integer port;
+
+  @Value("${jedis.host}")
+  private String host;
+
   /**
    * 设置 redis 配置信息
    *
-   * @param port 端口
-   * @param host 主机地址
    * @return JedisPool 对象
    */
   @Bean
-  public JedisPool jedisPool(
-      @Value("${jedis.port}") Integer port, @Value("${jedis.host}") String host) {
+  public JedisPool jedisPool() {
     return new JedisPool(host, port);
   }
 }
