@@ -17,7 +17,7 @@ public class SingletonExample5 {
   /**
    * 1. memory = allocate() 分配对象内存空间 2. ctorInstance() 初始化对象 3. instance = memory 设置instance指向刚分配的内存
    *
-   * <p>volatile + 双重检测:防指指令重排
+   * <p>volatile【主要】 + 双重检测:防指指令重排
    */
   private static volatile SingletonExample5 instance = null;
 
@@ -26,7 +26,7 @@ public class SingletonExample5 {
    * 使用 synchronized 修饰<br>
    * 双重检测机制
    */
-  private static synchronized SingletonExample5 getInstance() {
+  private static SingletonExample5 getInstance() {
     // 双重检测
     if (instance == null) {
       // 同步锁

@@ -12,15 +12,18 @@ import com.chachae.annoations.ThreadSafe;
 @ThreadSafe
 public class SingletonExample6 {
 
-  /** 私有构造 */
+  /** 1. 私有构造 */
   private SingletonExample6() {}
 
-  /** 单例对象 */
+  /** 2. 单例对象 */
   private static SingletonExample6 instance;
 
+  // 3. 使用静态块创建对象
   static {
     instance = new SingletonExample6();
   }
+
+  // 以上三步的顺序不能调换！
 
   /** 静态工厂方法 */
   private static SingletonExample6 getInstance() {
@@ -28,6 +31,7 @@ public class SingletonExample6 {
   }
 
   public static void main(String[] args) {
+    // 执行hashCode 的值一样说明返回的是=同一个对象
     System.out.println(getInstance().hashCode());
     System.out.println(getInstance().hashCode());
   }

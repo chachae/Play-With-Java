@@ -12,18 +12,19 @@ import com.chachae.annoations.NotThreadSafe;
 @NotThreadSafe
 public class SingletonExample4 {
 
-  private SingletonExample4() {}
+  public SingletonExample4() {}
 
   /*
   1. memory = allocate() 分配对象内存空间
   2. ctorInstance() 初始化对象
-  3. instance = memory 设置instance指向刚分配的内存
+  3. instance = memory 设置instance指向刚分配的内存.
 
-  JVM和CPU优化，发生指令重排
+  JVM和CPU优化，发生指令重排【指令重排是发成线程安全问题的主要因素】
   1. memory = allocate() 分配对象内存空间
   3. instance = memory 设置instance指向刚分配的内存
-  2. ctorInstance() 初始化对象
+  2. ctorInstance() 初始化对象.
    */
+
   private static SingletonExample4 instance = null;
 
   /**
@@ -31,10 +32,10 @@ public class SingletonExample4 {
    * 使用 synchronized 修饰<br>
    * 双重检测机制
    */
-  private static synchronized SingletonExample4 getInstance() {
-    // 双重检测
+  private static SingletonExample4 getInstance() {
+    // 双重检测机制
     if (instance == null) {
-      // 同步锁
+      // 同步锁【单独锁这个类】
       synchronized (SingletonExample4.class) {
         if (instance == null) {
           instance = new SingletonExample4();

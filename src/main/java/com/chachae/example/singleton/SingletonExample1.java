@@ -12,7 +12,11 @@ import com.chachae.annoations.NotThreadSafe;
 @NotThreadSafe
 public class SingletonExample1 {
 
-  /** 私有构造 */
+  /**
+   * 私有构造
+   *
+   * <p>禁止外部创建对象
+   */
   private SingletonExample1() {}
 
   /** 私有对象 */
@@ -21,7 +25,10 @@ public class SingletonExample1 {
   /**
    * 多线程下不安全
    *
-   * @return 对象
+   * <p>因为在多线程环境下，假设有两个线程同时执行到if (instance == null) 处，<br>
+   * 则拿到的instance 都为null，因此会重复实例化一个新的对象
+   *
+   * @return SingletonExample1 对象
    */
   public static SingletonExample1 getInstance() {
     if (instance == null) {
