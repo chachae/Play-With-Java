@@ -1,6 +1,5 @@
 package com.chachae.demo.singleton;
 
-import cn.hutool.core.thread.ThreadUtil;
 import com.chachae.annoations.ThreadSafe;
 
 /**

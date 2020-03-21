@@ -2,7 +2,7 @@ package com.chachae.demo.atomic;
 
 import cn.hutool.core.thread.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -45,8 +45,8 @@ public class AtomicDemo2 {
             },
             "threadB");
 
-    threadA.run();
-    threadB.run();
+    threadA.start();
+    threadB.start();
 
     log.info("修改成功，新值为：{}", count.get());
   }
