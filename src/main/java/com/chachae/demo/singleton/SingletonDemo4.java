@@ -1,6 +1,6 @@
 package com.chachae.demo.singleton;
 
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.ThreadSafe;
 
 /**
  * 枚举模式

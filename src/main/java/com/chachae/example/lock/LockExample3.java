@@ -1,6 +1,6 @@
 package com.chachae.example.lock;
 
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.ThreadSafe;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 

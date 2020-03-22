@@ -1,6 +1,6 @@
 package com.chachae.example.singleton;
 
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.ThreadSafe;
 
 /**
  * 饿汉模式 <br>

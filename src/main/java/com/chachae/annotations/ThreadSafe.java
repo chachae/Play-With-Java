@@ -1,4 +1,4 @@
-package com.chachae.annoations;
+package com.chachae.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

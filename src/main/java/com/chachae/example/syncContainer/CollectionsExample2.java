@@ -1,7 +1,7 @@
 package com.chachae.example.syncContainer;
 
 import cn.hutool.core.thread.ThreadUtil;
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.ThreadSafe;
 import com.google.common.collect.Sets;
 import lombok.extern.slf4j.Slf4j;
 

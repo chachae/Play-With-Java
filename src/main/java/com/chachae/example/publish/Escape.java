@@ -1,7 +1,7 @@
 package com.chachae.example.publish;
 
-import com.chachae.annoations.NotRecommend;
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annotations.NotRecommend;
+import com.chachae.annotations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 /**

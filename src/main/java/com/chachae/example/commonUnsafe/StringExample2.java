@@ -1,7 +1,7 @@
 package com.chachae.example.commonUnsafe;
 
 import cn.hutool.core.thread.ThreadUtil;
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;

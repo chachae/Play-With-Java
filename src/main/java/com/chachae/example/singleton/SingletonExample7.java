@@ -1,7 +1,7 @@
 package com.chachae.example.singleton;
 
-import com.chachae.annoations.Recommend;
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.Recommend;
+import com.chachae.annotations.ThreadSafe;
 
 /**
  * 枚举 最安全

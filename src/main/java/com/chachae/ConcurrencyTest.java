@@ -1,6 +1,6 @@
 package com.chachae;
 
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annotations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;

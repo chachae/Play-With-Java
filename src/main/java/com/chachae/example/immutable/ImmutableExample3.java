@@ -1,7 +1,7 @@
 package com.chachae.example.immutable;
 
 import cn.hutool.core.lang.Console;
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.ThreadSafe;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;

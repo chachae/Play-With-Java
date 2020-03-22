@@ -22,7 +22,7 @@ Java 高并发与并发编程学习主目录
 
 1. 慕课版 Java 并发编程与高并发解决方案
 2. 《Java 并发编程之美》
-3. [CS-Notes]([https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%B9%B6%E5%8F%91.md](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java 并发.md)) Java 并发部分
+3. [CS-Notes Java 并发编程部分]([https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%B9%B6%E5%8F%91.md]())
 
 
 

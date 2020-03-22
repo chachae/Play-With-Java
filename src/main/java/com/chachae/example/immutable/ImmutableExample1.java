@@ -1,6 +1,6 @@
 package com.chachae.example.immutable;
 
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annotations.NotThreadSafe;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,7 +1,7 @@
 package com.chachae.example.singleton;
 
-import com.chachae.annoations.NotRecommend;
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.NotRecommend;
+import com.chachae.annotations.ThreadSafe;
 
 /**
  * 懒汉模式 <br>

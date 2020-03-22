@@ -1,6 +1,6 @@
 package com.chachae.example.atomic;
 
-import com.chachae.annoations.ThreadSafe;
+import com.chachae.annotations.ThreadSafe;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 

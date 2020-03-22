@@ -1,6 +1,6 @@
 package com.chachae.example.singleton;
 
-import com.chachae.annoations.NotThreadSafe;
+import com.chachae.annotations.NotThreadSafe;
 
 /**
  * 懒汉模式 -> 双重同步锁单例模式 <br>
