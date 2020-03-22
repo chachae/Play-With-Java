@@ -20,12 +20,7 @@ public class ThreadPoolExample1 {
       final int index = i;
 
       executorService.execute(
-          new Runnable() {
-            @Override
-            public void run() {
-              log.info("task:{}", index);
-            }
-          });
+              () -> log.info("task:{}", index));
     }
     executorService.shutdown();
   }
