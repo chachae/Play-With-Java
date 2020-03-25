@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>concurrency-begin</module>
+        <module>simple-seckill</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,6 +22,7 @@
         <hutool.version>5.2.3</hutool.version>
         <guava.version>28.2-jre</guava.version>
         <joda.time.version>2.10.5</joda.time.version>
+        <beetl.version>1.2.24.RELEASE</beetl.version>
     </properties>
 
     <dependencyManagement>
@@ -45,6 +47,13 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- beetl -->
+            <dependency>
+                <groupId>com.ibeetl</groupId>
+                <artifactId>beetl-framework-starter</artifactId>
+                <version>${beetl.version}</version>
             </dependency>
 
         </dependencies>
