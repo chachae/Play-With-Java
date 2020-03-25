@@ -5,6 +5,7 @@
     <modules>
         <module>concurrency-begin</module>
         <module>simple-seckill</module>
+        <module>jvm</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
