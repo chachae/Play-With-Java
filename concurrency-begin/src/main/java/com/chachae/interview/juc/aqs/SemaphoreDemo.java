@@ -3,6 +3,7 @@ package com.chachae.interview.juc.aqs;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 信号量
@@ -27,8 +28,9 @@ public class SemaphoreDemo {
 
               // 获取
               semaphore.acquire();
+
               System.out.println("run");
-              Thread.sleep(2000);
+              TimeUnit.SECONDS.sleep(2);
 
             } catch (InterruptedException e) {
               e.printStackTrace();
