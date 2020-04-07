@@ -1,4 +1,4 @@
-package com.chachae;
+package com.chachae.array;
 
 /**
  * @author chachae
@@ -12,9 +12,9 @@ public class Main {
 
   public static void test() {
     // 初始化 5 个元素容量的数组
-    Array<Integer> array = new Array<>(5);
+    Array<Integer> array = new Array<>(10);
     // 插入式条数据
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 100; i++) {
       array.add(i);
     }
     // 索引 0 替换成 1
@@ -26,7 +26,7 @@ public class Main {
     array.remove(10);
     System.out.println(array.toString());
     // 移除前8个元素
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 80; i++) {
       array.remove(0);
     }
     System.out.println(array.toString());

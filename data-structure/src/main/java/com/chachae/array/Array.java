@@ -1,4 +1,4 @@
-package com.chachae;
+package com.chachae.array;
 
 /**
  * 动态泛型数组
@@ -36,6 +36,15 @@ public class Array<E> {
    */
   public int getSize() {
     return size;
+  }
+
+  /**
+   * 数组是否为空
+   *
+   * @return boolean
+   */
+  public boolean isEmpty() {
+    return size == 0;
   }
 
   /**
@@ -87,6 +96,7 @@ public class Array<E> {
     } else {
       System.arraycopy(data, index + 1, data, index, size - index);
       size--;
+      ensureCapacity();
       return e;
     }
   }
@@ -121,27 +131,31 @@ public class Array<E> {
    */
   public int indexOf(E e) {
     for (int i = 0; i < data.length; i++) {
-      if (data[i].equals(e)) {
+      if (get(i).equals(e)) {
         return i;
       }
     }
     return -1;
   }
 
-  /** 判断是否需要增容/扩容 */
+  /** 确保数组容量的方法 */
   private void ensureCapacity() {
+    // 扩容
     if (size == getCapacity()) {
-      // 扩容
-      resize();
+      resize(getCapacity() << 1);
+    }
+    // 缩容
+    if (getCapacity() / 2 != 0 && size <= getCapacity() / 4) {
+      resize(getCapacity() >> 1);
     }
   }
 
   /** 扩容机制 */
-  private void resize() {
+  private void resize(int newSize) {
     // 扩容两倍
-    E[] es = (E[]) new Object[size << 1];
-    System.arraycopy(data, 0, es, 0, size);
-    data = es;
+    E[] newData = (E[]) new Object[newSize];
+    System.arraycopy(data, 0, newData, 0, size);
+    data = newData;
   }
 
   @Override

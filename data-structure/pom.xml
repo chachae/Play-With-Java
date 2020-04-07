@@ -11,9 +11,5 @@
 
     <artifactId>data-structure</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>array</module>
-    </modules>
-
 
 </project>
