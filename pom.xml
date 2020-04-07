@@ -6,6 +6,7 @@
         <module>juc</module>
         <module>simple-seckill</module>
         <module>jvm</module>
+        <module>data-structure</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
