@@ -8,16 +8,12 @@ package com.chachae.queue;
  */
 public class LoopQueue<E> implements Queue<E> {
 
-  /** 数据 */
   private E[] data;
 
-  /** 队头 */
   private int front;
 
-  /** 队尾 */
   private int tail;
 
-  /** 容量 */
   private int size;
 
   public LoopQueue(int capacity) {
@@ -32,7 +28,6 @@ public class LoopQueue<E> implements Queue<E> {
   }
 
   public int getCapacity() {
-    // 用户可感知的长度，实际长度为可感知长度+1
     return getRealLength() - 1;
   }
 
@@ -41,13 +36,13 @@ public class LoopQueue<E> implements Queue<E> {
   }
 
   @Override
-  public int getSize() {
-    return size;
+  public boolean isEmpty() {
+    return front == tail;
   }
 
   @Override
-  public boolean isEmpty() {
-    return front == tail;
+  public int getSize() {
+    return size;
   }
 
   @Override
@@ -85,7 +80,7 @@ public class LoopQueue<E> implements Queue<E> {
     if ((tail + 1) % getRealLength() == front) {
       resize(getCapacity() << 1);
     }
-    if (size == getCapacity() / 4 && getCapacity() / 2 != 0) {
+    if (size == getCapacity() >> 2 && getCapacity() >> 1 != 0) {
       resize(getCapacity() >> 1);
     }
   }
@@ -105,7 +100,7 @@ public class LoopQueue<E> implements Queue<E> {
   public String toString() {
 
     StringBuilder res = new StringBuilder();
-    res.append(String.format("Queue: size = %d\ncapacity = %d\n", size, getCapacity()));
+    res.append(String.format("Queue: size = %d , capacity = %d\n", size, getCapacity()));
     res.append("front [");
     for (int i = front; i != tail; i = (i + 1) % getRealLength()) {
       res.append(data[i]);

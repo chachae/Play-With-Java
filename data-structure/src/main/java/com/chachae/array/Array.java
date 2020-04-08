@@ -8,10 +8,14 @@ package com.chachae.array;
  */
 public class Array<E> {
 
-  /** 长度 */
+  /**
+   * 长度
+   */
   private int size;
 
-  /** 数组元素 */
+  /**
+   * 数组元素
+   */
   private E[] data;
 
   /**
@@ -24,7 +28,9 @@ public class Array<E> {
     data = (E[]) new Object[capacity];
   }
 
-  /** 默认无参构造 */
+  /**
+   * 默认无参构造
+   */
   public Array() {
     this(16);
   }
@@ -60,7 +66,7 @@ public class Array<E> {
    * 在指定索引位置追加元素
    *
    * @param index 索引
-   * @param e 元素
+   * @param e     元素
    */
   public void add(int index, E e) {
     // 判断索引是否非法
@@ -105,7 +111,7 @@ public class Array<E> {
    * 更新索引值元素
    *
    * @param index 索引
-   * @param e 新值
+   * @param e     新值
    * @return 旧值
    */
   public E update(int index, E e) {
@@ -138,7 +144,9 @@ public class Array<E> {
     return -1;
   }
 
-  /** 确保数组容量的方法 */
+  /**
+   * 确保数组容量的方法
+   */
   private void ensureCapacity() {
     // 扩容
     if (size == getCapacity()) {
@@ -150,7 +158,9 @@ public class Array<E> {
     }
   }
 
-  /** 扩容机制 */
+  /**
+   * 扩容机制
+   */
   private void resize(int newSize) {
     // 扩容两倍
     E[] newData = (E[]) new Object[newSize];
