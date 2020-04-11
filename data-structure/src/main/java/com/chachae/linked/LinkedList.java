@@ -112,11 +112,11 @@ public class LinkedList<E> {
     for (int i = 0; i < index; i++) {
       prev = prev.next;
     }
-    Node deletedNode = prev.next;
-    prev.next = deletedNode.next;
-    deletedNode.next = null;
+    Node del = prev.next;
+    prev.next = del.next;
+    del.next = null;
     size--;
-    return deletedNode.e;
+    return del.e;
   }
 
   public E removeLast() {
