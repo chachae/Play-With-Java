@@ -7,6 +7,19 @@ public class Main {
 
 
   public static void main(String[] args) {
+    test();
+  }
+
+  private static void test() {
+    BST<Integer> bst = new BST<>();
+    int[] n = new int[]{4, 5, 0, 10, -4, 3};
+    for (int i : n) {
+      bst.add(i);
+    }
+    bst.preOrderNR();
+  }
+
+  private static void test2() {
 
     BST<Integer> bst = new BST<>();
     Random random = new Random();
@@ -49,4 +62,5 @@ public class Main {
     }
     System.out.println("removeMax test completed.");
   }
+
 }
