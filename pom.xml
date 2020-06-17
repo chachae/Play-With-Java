@@ -15,10 +15,10 @@
         <relativePath/>
     </parent>
     <groupId>com.chachae</groupId>
-    <artifactId>concurrency</artifactId>
+    <artifactId>take-it-easy</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>concurrency</name>
+    <name>${project.artifactId}</name>
     <properties>
         <java.version>1.8</java.version>
         <hutool.version>5.2.3</hutool.version>
