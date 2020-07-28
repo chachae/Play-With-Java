@@ -7,6 +7,8 @@
         <module>simple-seckill</module>
         <module>jvm</module>
         <module>data-structure</module>
+      <module>design-patterns</module>
+      <module>offer-come-on</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
