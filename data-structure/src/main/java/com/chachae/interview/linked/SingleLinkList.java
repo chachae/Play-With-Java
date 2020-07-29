@@ -1,8 +1,5 @@
 package com.chachae.interview.linked;
 
-import com.chachae.linked.LinkedList;
-import com.jayway.jsonpath.internal.function.numeric.Sum;
-
 /**
  * @author chachae
  * @version v1.0
