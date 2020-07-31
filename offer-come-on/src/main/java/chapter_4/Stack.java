@@ -1,4 +1,4 @@
-package part4;
+package chapter_4;
 
 /**
  * @author chachae

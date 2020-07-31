@@ -1,7 +1,4 @@
-package part4;
-
-import java.nio.charset.StandardCharsets;
-import sun.security.provider.MD4;
+package chapter_4;
 
 /**
  * @author chachae
