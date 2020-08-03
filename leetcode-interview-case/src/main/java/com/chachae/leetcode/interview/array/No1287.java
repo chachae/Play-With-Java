@@ -16,11 +16,17 @@ public class No1287 {
   }
 
   public int findSpecialInteger(int[] arr) {
-    for (int i = 0, len = arr.length / 4; i < arr.length - len; i++) {
-      if (arr[i] == arr[i + len]) {
-        return arr[i];
+    double lessCount = arr.length / 4.0;
+    int cur = arr[0];
+    int count = 1;
+    for (int i = 1; i < arr.length; i++) {
+      if (arr[i] == cur && ++count > lessCount) {
+        break;
+      } else {
+        count = 1;
+        cur = arr[i];
       }
     }
-    return arr[0];
+    return cur;
   }
 }
