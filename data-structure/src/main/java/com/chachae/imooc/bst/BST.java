@@ -159,7 +159,7 @@ public class BST<E extends Comparable<E>> {
   public void levelOrder() {
     Queue<Node> queue = new LinkedList<>();
     queue.add(root);
-    while (queue.size() != 0) {
+    while (!queue.isEmpty()) {
       Node cur = queue.remove();
       System.out.printf("%s\t", cur.e);
       if (cur.left != null) {
