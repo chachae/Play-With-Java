@@ -1,4 +1,4 @@
-package com.chachae.netty.io.nio;
+package com.chachae.nio;
 
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
