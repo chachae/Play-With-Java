@@ -1,4 +1,4 @@
-package com.chachae.algorithm.imooc.stack_and_queue;
+package com.chachae.algorithm.imooc;
 
 /**
  * @author chachae
