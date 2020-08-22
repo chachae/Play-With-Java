@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>juc</artifactId>
+    <artifactId>Play-With-JUC</artifactId>
 
 
     <dependencies>
