@@ -10,6 +10,7 @@
       <module>design-patterns</module>
       <module>offer-come-on</module>
       <module>leetcode-interview-case</module>
+      <module>algorithm</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
