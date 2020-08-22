@@ -3,14 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>juc</module>
-        <module>simple-seckill</module>
-        <module>jvm</module>
-        <module>data-structure</module>
-      <module>design-patterns</module>
-      <module>offer-come-on</module>
-      <module>leetcode-interview-case</module>
-      <module>algorithm</module>
+        <module>Play-With-JUC</module>
+        <module>Play-With-JVM</module>
+        <module>Play-With-Data-Structure</module>
+      <module>Play-With-Design-Patterns</module>
+      <module>Play-With-Algorithm</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -19,7 +16,7 @@
         <relativePath/>
     </parent>
     <groupId>com.chachae</groupId>
-    <artifactId>take-it-easy</artifactId>
+    <artifactId>Play-With-Java</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
