@@ -8,6 +8,7 @@
         <module>Play-With-Data-Structure</module>
       <module>Play-With-Design-Patterns</module>
       <module>Play-With-Algorithm</module>
+        <module>Play-With-Netty</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
