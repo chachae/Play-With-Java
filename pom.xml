@@ -9,6 +9,7 @@
       <module>Play-With-Design-Patterns</module>
       <module>Play-With-Algorithm</module>
         <module>Play-With-Netty</module>
+      <module>Play-With-LeetCode</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
