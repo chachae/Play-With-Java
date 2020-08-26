@@ -10,6 +10,7 @@
       <module>Play-With-Algorithm</module>
         <module>Play-With-Netty</module>
       <module>Play-With-LeetCode</module>
+      <module>Play-With-LanQiao</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
