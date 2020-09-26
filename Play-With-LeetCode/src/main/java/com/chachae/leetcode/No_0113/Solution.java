@@ -14,23 +14,27 @@ import java.util.List;
  */
 class Solution {
 
-  private final List<List<Integer>> ans = new ArrayList<>();
+  private List<List<Integer>> ans;
 
   public List<List<Integer>> pathSum(TreeNode root, int sum) {
-    dfs(root, sum, new LinkedList<>());
+    ans = new LinkedList<>();
+    dfs(root, sum, new ArrayList<>());
     return ans;
   }
 
-  private void dfs(TreeNode root, int sum, LinkedList<Integer> path) {
+  private void dfs(TreeNode root, int sum, List<Integer> path) {
+
     if (root == null) {
       return;
     }
+
     path.add(root.val);
-    if (root.left == null && root.right == null && sum == root.val) {
+    if (sum == root.val && root.left == null && root.right == null) {
       ans.add(new ArrayList<>(path));
     }
+
     dfs(root.left, sum - root.val, path);
     dfs(root.right, sum - root.val, path);
-    path.removeLast();
+    path.remove(path.size() - 1);
   }
 }
