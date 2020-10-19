@@ -2,6 +2,7 @@ package com.chachae.lanqiao.acwing;
 
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * https://www.acwing.com/problem/content/95/
@@ -12,28 +13,35 @@ import java.util.Scanner;
  */
 public class Acwing93 {
 
+  private static boolean[] vis;
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt(); // 5
     int k = sc.nextInt(); // 3
+    vis = new boolean[n + 1];
     dfs(1, n, k, new LinkedList<>());
   }
 
-  static void dfs(int idx, int n, int k, LinkedList<Integer> path) {
-    if (path.size() == k) {
-      for (int e : path) {
-        System.out.print(e + " ");
+  private static void dfs(int start, int end, int len, LinkedList<Integer> path) {
+    if (path.size() == len) {
+      System.out.println(path.stream().map(String::valueOf).collect(Collectors.joining(" ")));
+      return;
+    }
+
+    if (path.size() > len) {
+      return;
+    }
+
+    for (int i = start; i <= end; i++) {
+      if (!vis[i]) {
+        vis[i] = true;
+        path.addLast(i);
+        dfs(i + 1, end, len, path);
+        path.removeLast();
+        vis[i] = false;
       }
-      System.out.println();
-      return;
-    }
-    if (idx > n) {
-      return;
-    }
-    for (int i = idx; i <= n; i++) {
-      path.addLast(i);
-      dfs(i + 1, n, k, path);
-      path.removeLast();
     }
   }
 }
+
