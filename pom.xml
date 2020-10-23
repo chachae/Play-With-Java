@@ -11,6 +11,7 @@
         <module>Play-With-Netty</module>
       <module>Play-With-LeetCode</module>
       <module>Play-With-LanQiao</module>
+      <module>Play-With-Java-Collections</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
