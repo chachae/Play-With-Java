@@ -12,6 +12,7 @@
       <module>Play-With-LeetCode</module>
       <module>Play-With-LanQiao</module>
       <module>Play-With-Java-Collections</module>
+      <module>Play-With-Interview-Experience</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
