@@ -6,6 +6,9 @@
 package com.chachae.jvm;
 
 /***
+ *
+ *<a href="https://doocs.gitee.io/jvm">JVM 底层原理总结</a>
+ *
  *JVM 垃圾回收：
  * Java 堆是垃圾收集器管理的主要区域，因此也被称作GC 堆（Garbage Collected Heap）.从垃
  * 圾回收的⻆度，由于现在收集器基本都采⽤分代垃圾收集算法，所以 Java 堆还可以细分为：新
