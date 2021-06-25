@@ -31,6 +31,7 @@
         <guava.version>28.2-jre</guava.version>
         <joda.time.version>2.10.5</joda.time.version>
         <beetl.version>1.2.24.RELEASE</beetl.version>
+        <netty.version>4.1.65.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -109,6 +110,11 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
     </dependencies>
