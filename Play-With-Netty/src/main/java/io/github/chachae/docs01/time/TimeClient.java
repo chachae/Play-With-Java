@@ -24,7 +24,7 @@ public class TimeClient {
             bootstrap.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 protected void initChannel(SocketChannel socketChannel) {
-                    socketChannel.pipeline().addLast(new TimeClientHandler());
+                    socketChannel.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
                 }
             });
             ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 8080).sync();
